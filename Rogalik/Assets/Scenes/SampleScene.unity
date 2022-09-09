@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  jampForse: 150
+  jampForse: 300
 --- !u!61 &43315091
 BoxCollider2D:
   m_ObjectHideFlags: 0
