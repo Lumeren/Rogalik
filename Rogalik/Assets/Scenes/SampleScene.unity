@@ -353,7 +353,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   sr: {fileID: 0}
   faceRight: 1
-  jumpForse: 475
+  jumpForse: 500
   onGround: 0
   Ground:
     serializedVersion: 2
