@@ -359,6 +359,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   GroundCheck: {fileID: 1419372494}
+  lungeImpulse: 5000
 --- !u!50 &1173206489
 Rigidbody2D:
   serializedVersion: 4
@@ -389,7 +390,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1173206487}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ed7f319288e4fd4a80877de2afb5d79, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
