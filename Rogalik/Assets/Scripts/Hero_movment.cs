@@ -52,7 +52,6 @@ public class Hero_movment : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && onGround )
         {
-            //rb.velocity = new Vector2(rb.velocity.x, jumpForse);
             rb.AddForce(Vector2.up * jumpForse);
         }
     }
