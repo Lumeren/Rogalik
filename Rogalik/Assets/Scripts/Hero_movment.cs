@@ -70,8 +70,11 @@ public class Hero_movment : MonoBehaviour
     public int lungeImpulse;
     void Lungh()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !lockLinge)
         {
+            lockLinge = true;
+            Invoke("lockLunghe", 2f);
+
             anim.StopPlayback();
             anim.Play("lunge");
 
@@ -82,6 +85,13 @@ public class Hero_movment : MonoBehaviour
         }
     }
 
+
+    private bool lockLinge = false;
+
+    void lockLunghe()
+    {
+        lockLinge = false;
+    }
 
 
 }
