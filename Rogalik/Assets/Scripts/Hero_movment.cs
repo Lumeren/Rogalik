@@ -73,7 +73,7 @@ public class Hero_movment : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) && !lockLinge)
         {
             lockLinge = true;
-            Invoke("lockLunghe", 2f);
+            Invoke("lockLunghe", 1f);
 
             anim.StopPlayback();
             anim.Play("lunge");
