@@ -25,6 +25,7 @@ public class Hero_movment : MonoBehaviour
         Reflect();
         Jump();
         CheckingGround();
+        Lungh();
     }
 
     void walk()
@@ -51,7 +52,6 @@ public class Hero_movment : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && onGround )
         {
-            //rb.velocity = new Vector2(rb.velocity.x, jumpForse);
             rb.AddForce(Vector2.up * jumpForse);
         }
     }
@@ -63,8 +63,35 @@ public class Hero_movment : MonoBehaviour
     void CheckingGround()
     {
         onGround = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, Ground);
+
+        anim.SetBool("onGround", onGround);
     }
 
+    public int lungeImpulse;
+    void Lungh()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !lockLinge)
+        {
+            lockLinge = true;
+            Invoke("lockLunghe", 2f);
+
+            anim.StopPlayback();
+            anim.Play("lunge");
+
+            rb.velocity = new Vector2(0, 0);
+
+            if (!faceRight) { rb.AddForce(Vector2.left * lungeImpulse); }
+            else { rb.AddForce(Vector2.right * lungeImpulse);  }
+        }
+    }
+
+
+    private bool lockLinge = false;
+
+    void lockLunghe()
+    {
+        lockLinge = false;
+    }
 
 
 }
