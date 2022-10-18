@@ -26,6 +26,7 @@ public class Hero_movment : MonoBehaviour
         Jump();
         CheckingGround();
         Lungh();
+        Attak();
     }
 
     void walk()
@@ -91,6 +92,15 @@ public class Hero_movment : MonoBehaviour
     void lockLunghe()
     {
         lockLinge = false;
+    }
+
+    void Attak()
+    {
+        if (Input.GetKeyDown(KeyCode.RightControl))
+        {
+            anim.StopPlayback();
+            anim.Play("Udar");
+        }
     }
 
 
